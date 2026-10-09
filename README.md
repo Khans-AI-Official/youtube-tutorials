@@ -6,6 +6,8 @@ Code from the tutorials on the [Khan's AI YouTube channel](https://www.youtube.c
 |---|---|---|
 | `01-pdf-chatbot` | Build a Chatbot That Answers From Your PDFs | Minimal RAG chatbot: pypdf + numpy + OpenAI API |
 | `02-shelf-counting` | Count Products on a Shelf With Computer Vision | Train, count and export a YOLO detector with Ultralytics |
+| `03-invoice-reader` | Read Invoices Automatically With Python and AI | OCR with Tesseract, fields extracted by an LLM, saved to Excel |
+| `04-ai-agent-tools` | Build an AI Agent That Uses Tools | Tool-calling agent loop in plain Python, no framework |
 
 ## 01: PDF chatbot
 ```bash
@@ -20,6 +22,22 @@ pip install ultralytics
 python train_shelf.py        # needs your labelled dataset in YOLO format (see shelf.yaml)
 python count_products.py     # counts products on shelf_photo.jpg
 python export_model.py       # ONNX for servers, TFLite for Android
+```
+
+## 03: Invoice reader
+```bash
+pip install pytesseract pillow openai pandas openpyxl
+# also install the Tesseract OCR engine (see the top of invoice_reader.py)
+export OPENAI_API_KEY="your-key-here"
+python make_sample_invoice.py      # optional: creates invoices/sample_invoice.png
+python invoice_reader.py           # reads every image in invoices/ into invoices.xlsx
+```
+
+## 04: AI agent with tools
+```bash
+pip install openai
+export OPENAI_API_KEY="your-key-here"
+python agent.py "Which product earned the most in 2026-09, and what is 15% of that?"
 ```
 
 ## Khan's AI
