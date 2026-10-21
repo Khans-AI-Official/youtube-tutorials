@@ -1,0 +1,9 @@
+[00:00] Sara: Okay, let's start. The main thing today is the shop app launch.
+[00:12] Bilal: The Android build is ready. Windows needs one more day of testing.
+[00:31] Sara: Then we launch on Monday, both together. Agreed?
+[00:38] Bilal: Agreed. I'll finish the Windows testing by Friday.
+[01:05] Ayesha: I can write the WhatsApp message for the shopkeepers. I'll have it ready by Saturday.
+[01:22] Sara: Good. We also decided to keep the app free for the first three months.
+[01:40] Bilal: Someone should update the website download links.
+[01:46] Sara: I'll do that on Monday morning.
+[02:05] Ayesha: Last thing, we still need prices for the paid plan. Let's discuss next week.
