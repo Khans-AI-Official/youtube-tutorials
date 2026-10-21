@@ -8,6 +8,8 @@ Code from the tutorials on the [Khan's AI YouTube channel](https://www.youtube.c
 | `02-shelf-counting` | Count Products on a Shelf With Computer Vision | Train, count and export a YOLO detector with Ultralytics |
 | `03-invoice-reader` | Read Invoices Automatically With Python and AI | OCR with Tesseract, fields extracted by an LLM, saved to Excel |
 | `04-ai-agent-tools` | Build an AI Agent That Uses Tools | Tool-calling agent loop in plain Python, no framework |
+| `05-chat-with-excel` | Chat With Your Excel Data Using Python and AI | LLM writes a JSON query plan, pandas computes the answer safely |
+| `06-meeting-notes` | Transcribe and Summarize Meetings With Python | Local Whisper transcript, summary, decisions and action items |
 
 ## 01: PDF chatbot
 ```bash
@@ -39,6 +41,23 @@ pip install openai
 export OPENAI_API_KEY="your-key-here"
 python agent.py "Which product earned the most in 2026-09, and what is 15% of that?"
 ```
+
+## 05: Chat with your Excel data
+
+```
+pip install pandas openpyxl openai
+python make_sample_sales.py
+python excel_chat.py sales.xlsx
+```
+The model only sees column names and 3 sample rows. It returns a JSON plan; unknown columns or operators are rejected, and no generated code is ever executed.
+
+## 06: Meeting notes
+
+```
+pip install faster-whisper openai
+python meeting_notes.py meeting.mp3        # or sample_transcript.txt
+```
+Saves `<name>_notes.md` with a summary, decisions and an action-item table.
 
 ## Khan's AI
 Applied AI studio in Peshawar, Pakistan: computer vision, AI chatbots and agents, machine learning and AI web apps.
