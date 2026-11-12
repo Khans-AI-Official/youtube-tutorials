@@ -1,0 +1,8 @@
+# virtual environment: never commit it, rebuild it from requirements.txt
+.venv/
+# Python caches
+__pycache__/
+*.pyc
+# editor and OS files
+.vscode/
+.DS_Store
